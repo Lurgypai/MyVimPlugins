@@ -16,6 +16,6 @@ nodejs
 npm
 default-jdk
 
-These should all be installable using apt without much difficulty.
+The 'install_dependencies.sh' script simply instals these.
 
 YouCompleteMe requires a list of compiler flags when working with C and C++. I've included a simple config file (.ycm_extra_congif.py) that contains flags for C.
