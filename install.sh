@@ -12,4 +12,4 @@ sudo make && sudo make install
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim -c 'PluginInstall' -c 'qa!'
 cd ~/.vim/bundle/youcompleteme
-sudo python3 install.py --all
+python3 install.py --all
