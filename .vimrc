@@ -22,5 +22,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'valloric/youcompleteme'
 
 call vundle#end()
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_lua_checkers = ["luacheck"]
+let g:syntastic_lua_luacheck_args = "--no-unused-args"
+
 filetype plugin indent on
 
