@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ~/.vim_install/vim/src
-sudo make uninstall
-cd
+sudo apt purge vim
 sudo rm -rf ~/.vim_install
-
+sudo rm -rf ~/.vim
+sudo rm -f ~/.vimrc
