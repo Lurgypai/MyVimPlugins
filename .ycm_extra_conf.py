@@ -1,2 +1,2 @@
 def Settings( ** kwargs):
-    return { 'flags': ['-x', 'c'] }
+    return { 'flags': ['-x', 'c', 'c++'] }

@@ -23,6 +23,8 @@ Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 
+let g:ycm_global_ycm_extra_conf = "~/.viminstall/.ycm_extra_conf.py"
+
 let g:syntastic_check_on_open = 1
 let g:syntastic_lua_checkers = ["luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args"
