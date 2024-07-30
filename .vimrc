@@ -8,8 +8,6 @@ set nocompatible
 set spr
 set sb
 
-packadd termdebug
-
 let g:termdebug_wide=1
 filetype off
 
