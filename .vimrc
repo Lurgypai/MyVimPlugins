@@ -8,20 +8,10 @@ set nocompatible
 set spr
 set sb
 
+packadd! termdebug
+packadd YouCompleteMe
+
 let g:termdebug_wide=1
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'valloric/youcompleteme'
-
-call vundle#end()
-
-
 let g:ycm_global_ycm_extra_conf = "~/.viminstall/.ycm_extra_conf.py"
 
 "Should be disabled by ycm, but do manually for good measure
@@ -32,9 +22,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_lua_checkers = ["luacheck"]
 let g:syntastic_lua_luacheck_args = "--no-unused-args"
 
+
 filetype plugin indent on
 
-packadd! termdebug
+
+"Session management utilities
 
 command Sess mksession! .vimsession
 command SessClear echo delete(".vimsession")

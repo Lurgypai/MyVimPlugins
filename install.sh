@@ -16,9 +16,15 @@ cd vim
 ./configure --enable-python3interp
 make && sudo make install
 
+# you complete me, autocomplete plugin
+git clone --recurse-submodules https://github.com/ycm-core/YouCompleteMe.git ~/.vim/pack/YouCompleteMe/opt/YouCompleteMe
+pushd ~/.vim/pack/YouCompleteMe/opt/YouCompleteMe
+./install.py --clang-completer
+popd
 
+# ctrlp, fuzzy file finder
+mkdir -p ~/.vim/pack/plugins/start
+git clone --depth=1 https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/plugins/start/ctrlp
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim -c 'PluginInstall' -c 'qa!'
-cd ~/.vim/bundle/youcompleteme
-python3 install.py --all
+# syntastic, used for luacheck, not enabled (is it needed?)
+# git clone --depth=1 https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/plugins/start/ctrlp
