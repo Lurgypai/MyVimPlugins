@@ -2,7 +2,7 @@
 
 YCM_FLAGS=""
 
-if [[ $1 -eq "--force-sudo" ]]; then
+if [[ $1 == "--force-sudo" ]]; then
     echo "WARNING: Compiling YCM with \"--force-sudo\""
     YCM_FLAGS="--force-sudo"
 fi
