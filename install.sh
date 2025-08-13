@@ -1,5 +1,11 @@
 #!/bin/bash
 
+YCM_FLAGS=""
+
+if [[ $1 -eq "--force-sudo" ]]; then
+    echo "WARNING: Compiling YCM with \"--force-sudo\""
+    YCM_FLAGS="--force-sudo"
+fi
 
 echo "Generating vim install directory and cloning..."
 if [[ -e ~/.viminstall ]]; then
@@ -19,7 +25,7 @@ make && sudo make install
 # you complete me, autocomplete plugin
 git clone --recurse-submodules https://github.com/ycm-core/YouCompleteMe.git ~/.vim/pack/YouCompleteMe/opt/YouCompleteMe
 pushd ~/.vim/pack/YouCompleteMe/opt/YouCompleteMe
-./install.py --clang-completer
+./install.py --clang-completer ${YCM_FLAGS}
 popd
 
 # ctrlp, fuzzy file finder
