@@ -7,16 +7,12 @@ set number
 set nocompatible
 set spr
 set sb
+set encoding=utf-8
 
 packadd! termdebug
 packadd YouCompleteMe
 
 let g:termdebug_wide=1
-let g:ycm_global_ycm_extra_conf = "~/.viminstall/.ycm_extra_conf.py"
-
-"Should be disabled by ycm, but do manually for good measure
-let g:syntastic_c_checkers = [""]
-let g:syntastic_cxx_checkers = [""]
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_lua_checkers = ["luacheck"]
